@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int Size;
+   cout << "Enter array Size" << endl;
+   cin >> Size;
+   int *arr = new int[Size];
+   
+   for (int i = 0; i < Size; i++)
+   {
+      arr[i] = rand()% 10;
+   } 
+
+   int *arr2 = new int[Size];
+   
+   for (int i = 0; i < Size; i++)
+   {
+      arr2[i] = arr[i];
+   }
+      
+   for (int i = 0; i < Size; i++)
+   {
+      cout << i + 1 << " - number of array1 = \t" << arr[i] << endl;
+   }
+   
+   cout << "========================================" << endl;
+
+   for (int i = 0; i < Size; i++)
+   {
+      cout << i + 1 << " - number of array2 = \t" << arr2[i] << endl;
+   }
+   
+   delete [] arr2;
+   delete [] arr;
+}
